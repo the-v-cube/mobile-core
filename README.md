@@ -16,7 +16,7 @@ git clone https://github.com/the-v-cube/mobile-core.git
 Then simply
 ```
 cd mobile
-npm run
+npm start
 ```
 Scan the qr code using the [expo go app](https://expo.dev/client) and boom!
 
