@@ -3,6 +3,12 @@
 Source code for our mobile application. Written using [react-native](https://reactnative.dev/).
 
 ## Setup
+
+### Prerequisites
+The following has to be installed:
+- [git](https://git-scm.com/downloads)
+- [nodejs](https://nodejs.org/en/download)
+
 Clone the repository using
 ```
 git clone https://github.com/the-v-cube/mobile-core.git
