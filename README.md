@@ -16,9 +16,12 @@ git clone https://github.com/the-v-cube/mobile-core.git
 Then simply
 ```
 cd mobile
+npm install 
+npm run build
+npm link
 npm start
 ```
-Scan the qr code using the [expo go app](https://expo.dev/client) and boom!
+Scan the qr code using the [expo go app](https://expo.dev/client) while being on the same wifi network as your pc/laptop and boom!
 
 ## Features
 As per `PART A` of our timeline, we're simply going to have a single button which controls the `on` and `off` state of a relay in our micro-controller.
