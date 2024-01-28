@@ -1,6 +1,6 @@
 # mobile-core
 
-Source code for our mobile application. Written using [react-native](https://reactnative.dev/).
+Source code for our mobile application. Written using [react-native](https://reactnative.dev/). Please refer [CONTRIBUTING.md](CONTRIBUTING.md) for proper code convention and git commit style.
 
 ## Setup
 
@@ -9,9 +9,9 @@ The following has to be installed:
 - [git](https://git-scm.com/downloads)
 - [nodejs](https://nodejs.org/en/download)
 
-Clone the repository using
+Clone the repository using ssh protocol. Please watch videos on setting up ssh connection to github.
 ```
-git clone https://github.com/the-v-cube/mobile-core.git
+git clone git@github.com:the-v-cube/mobile-core.git
 ```
 Then simply
 ```
