@@ -23,7 +23,7 @@ npm link
 ### Method 1
 Run `npm start` inside `mobile` directory, scan the qr code using the [expo go app](https://expo.dev/client) while being on the same wifi network as your pc/laptop and boom!
 
-### Method 3
+### Method 2
 Create an [expo dev](https://expo.dev/) account and run the following:
 ```
 npm install -g eas-cli
