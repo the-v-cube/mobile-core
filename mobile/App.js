@@ -1,6 +1,16 @@
-import { useEffect } from "react";
+import Ionicons from "@expo/vector-icons/Ionicons";
 import NetInfo from "@react-native-community/netinfo";
-import { View, Alert, Text, Button, StyleSheet } from "react-native";
+import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
+
+import { useEffect } from "react";
+import { Alert } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+
+import AboutScreen from "./screens/About";
+import ButtonScreen from "./screens/Button";
+
+const Tab = createBottomTabNavigator()
 
 const App = () => {
 	useEffect(() => {
@@ -21,38 +31,22 @@ const App = () => {
 		};
 	}, []);
 
-	const alert = () => {
-		Alert.alert("Psst!", "This feature doesn't work at the moment. Check the repository for the latest build!", [
-			{
-				text: "OK",
-				onPress: () => console.log("mc-relay-control invalid action informed")
-			}
-		])
-	}
-
 	return (
-		<View style={styles.container}>
-			<Text style={styles.text}>
-				Click the button below to control the on / off state of the relay!
-			</Text>
-			<Button title="Switch" onPress={alert} />
-		</View>
+		<NavigationContainer>
+			<Tab.Navigator>
+				<Tab.Screen
+					name="Button"
+					component={ButtonScreen}
+					options={{ tabBarIcon: () => <Ionicons name="sparkles" size={20} /> }}
+				/>
+				<Tab.Screen
+					name="About"
+					component={AboutScreen}
+					options={{ tabBarIcon: () => <MaterialCommunityIcons name="information" size={20} /> }}
+				/>
+			</Tab.Navigator>
+		</NavigationContainer>
 	);
 }
-
-const styles = StyleSheet.create({
-	container: { 
-		flex: 1, 
-		backgroundColor: "rgb(240, 230, 255)", 
-		padding: 65,
-	},
-	text: {
-		color: "black",
-		fontWeight: "bold",
-		textAlign: "center",
-		marginBottom: 5,
-	},
-})
-
 
 export default App;
