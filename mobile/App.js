@@ -9,6 +9,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import AboutScreen from "./screens/About";
 import ButtonScreen from "./screens/Button";
+import CounterScreen from "./screens/Counter";
 
 const Tab = createBottomTabNavigator()
 
@@ -43,6 +44,11 @@ const App = () => {
 					name="About"
 					component={AboutScreen}
 					options={{ tabBarIcon: () => <MaterialCommunityIcons name="information" size={20} /> }}
+				/>
+				<Tab.Screen
+					name="Counter"
+					component={CounterScreen}
+					options={{ tabBarIcon: () => <MaterialCommunityIcons name="plus" size={20} /> }}
 				/>
 			</Tab.Navigator>
 		</NavigationContainer>
